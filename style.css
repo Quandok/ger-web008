@@ -1,0 +1,236 @@
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(#6565e7), to(#af67e9));
+  background: linear-gradient(to top, #6565e7, #af67e9);
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  font-family: "Kumbh Sans", sans-serif;
+  font-size: 12px;
+  color: #787887;
+}
+
+.card {
+  top: 5vh;
+  min-width: none;
+  min-height: 70vh;
+  width: 85%;
+  position: relative;
+  background: white;
+  border-radius: 25px;
+  max-width: 400px;
+  min-width: 300px;
+  -webkit-box-shadow: 0px 50px 80px -40px rgba(0, 0, 0, 0.5);
+          box-shadow: 0px 50px 80px -40px rgba(0, 0, 0, 0.5);
+}
+
+/* LEFT COLUMN / IMAGE COLUMN*/
+.left {
+  position: absolute;
+  position: relative;
+}
+
+.image1 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  bottom: 40px;
+}
+
+.image1 .img1 {
+  z-index: 5;
+  -webkit-transform: translateY(-4.2rem);
+          transform: translateY(-4.2rem);
+  position: absolute;
+  right: 1em;
+  position: relative;
+}
+
+.image1 .img2 {
+  position: absolute;
+  bottom: 4.2em;
+}
+
+.image1 .img3,
+.image1 .img5 {
+  display: none;
+}
+
+.box {
+  display: none;
+}
+
+/* RIGHT COLUMN*/
+.right {
+  bottom: 5.5em;
+  position: relative;
+  margin: 0 2em;
+  /* QUESTION-ANSWER ITEMS COLUMN*/
+  /* EXPANDED EXPANDED EXPANDED EXPANDED*/
+}
+
+.right h2 {
+  text-align: center;
+  font-size: 2.5em;
+  color: #4a4b5e;
+  margin-bottom: 20px;
+}
+
+.right .items {
+  border-bottom: 1px solid #e7e7e9;
+}
+
+.right .items .question {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.right .items .question .arrow {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.right .answer {
+  padding: 8px 1px 8px 0;
+  position: relative;
+  line-height: 1.5em;
+  color: #787887;
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.right .question {
+  padding-top: 1em;
+}
+
+.right .expanded .answer {
+  max-height: 100px;
+  opacity: 1;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+  overflow: hidden;
+  padding: 5px 1px 5px 0;
+  margin-top: 5px;
+  margin-bottom: 3px;
+}
+
+.right .expanded .question {
+  font-weight: 700;
+  color: #4a4b5e;
+  -webkit-transition: all 400ms ease;
+  transition: all 400ms ease;
+}
+
+.right .expanded .question img {
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+  -webkit-transition: -webkit-transform 300ms ease;
+  transition: -webkit-transform 300ms ease;
+  transition: transform 300ms ease;
+  transition: transform 300ms ease, -webkit-transform 300ms ease;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  margin-bottom: 2em;
+  color: black;
+  font-size: 0.8em;
+}
+
+@media only screen and (min-width: 1440px) {
+  .card {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    min-width: 900px;
+    height: 65vh;
+    top: 0;
+  }
+  .img1,
+  .img2 {
+    display: none;
+  }
+  .image1 .img3,
+  .image1 .img4,
+  .image1 .img5 {
+    display: inline-block;
+    position: absolute;
+  }
+  .items {
+    margin-right: 7em;
+  }
+  .right {
+    bottom: 0;
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+    position: relative;
+  }
+  .left {
+    -webkit-box-flex: 1;
+        -ms-flex: 1;
+            flex: 1;
+  }
+  .image1 {
+    width: 100%;
+    height: 100%;
+    bottom: 0;
+    overflow: hidden;
+  }
+  h2 {
+    padding: 2.5em 0 0.2em 0;
+    text-align: left !important;
+  }
+  .img3 {
+    top: -26.5em;
+    left: -50em;
+    position: absolute;
+  }
+  .img5 {
+    width: 105%;
+    right: 4.5em;
+    top: 5em;
+  }
+  .box {
+    display: block;
+    position: absolute;
+    z-index: 1;
+    -webkit-transform: translateY(15em);
+            transform: translateY(15em);
+    left: -7.8em;
+  }
+}
+/*# sourceMappingURL=style.css.map */
